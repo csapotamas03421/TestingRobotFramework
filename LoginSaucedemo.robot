@@ -29,13 +29,15 @@ Open SauceDemo3
     Input Password    //*[@id="password"]     secret_sauce
     Click Button    id=login-button
     Sleep    2s
-    # Close Browser
+    Page Should Contain    Username and password do not match any user in this service
+    Close Browser
 
 Open SauceDemo4
     Open Browser     https://www.saucedemo.com/     google chrome
     Input Password    //*[@id="password"]    secret_sauce
     Click Button    id=login-button
     Sleep    2s
+    Page Should Contain    Username is required
     Close Browser
 
 Open SauceDemo5
@@ -43,6 +45,7 @@ Open SauceDemo5
     Input Text    //*[@id="user-name"]    text=standard_user
     Click Button    id=login-button
     Sleep    2s
+    Page Should Contain     Password is required
     Close Browser
 
 
