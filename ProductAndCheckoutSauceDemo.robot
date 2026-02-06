@@ -4,7 +4,7 @@ Library    Selenium2Library
 
 *** Test Cases ***
 Open SauceDemo
-    Open Browser  https://www.saucedemo.com/  google chrome
+    Open Browser  https://www.saucedemo.com/    firefox
     Input Text    //*[@id="user-name"]    text=standard_user
     Input Password    //*[@id="password"]    secret_sauce
     Click Button    //*[@id="login-button"]
@@ -18,7 +18,9 @@ Open SauceDemo
     Input Text    //*[@id="postal-code"]    text=6440
     Click Button    //*[@id="continue"]   
     Click Button    //*[@id="finish"] 
+
     Sleep    5s
-    #Close All Browsers
+    Page Should Contain    Thank you for your order!
+    Close Browser
     
 
